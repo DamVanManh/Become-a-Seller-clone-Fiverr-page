@@ -1,0 +1,316 @@
+section.header {
+    .header-wrapper {
+        padding: 0;
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: space-between;
+            width: 100%;
+            padding: 24px;
+            @media only screen and (min-width: 600px) {
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-content: center;
+                height: 80px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            @media only screen and (min-width: 1160px) {
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            button.btn-navicon {
+                margin-top: -9px;
+                @media screen and (min-width: 1160px) {
+                    margin-top: 0px;
+                    display: none;
+                }
+                background: none;
+                border: 0;
+                margin-right: 15px;
+                &:focus {
+                    outline: none;
+                }
+                // svg {
+                // }
+            }
+            a.site-logo {
+                margin: -5px auto 10px;
+                @media screen and (min-width: 600px) {
+                    margin: -4px 32px 0 0;
+                }
+                // svg {
+                // }
+            }
+            div.fiverr-header-search {
+                display: inline-block;
+                // đẩy xuống dưới
+                order: 99;
+                width: 100%;
+                margin-top: 14px;
+                @media screen and (min-width: 600px) {
+                    order: 0;
+                    width: 30%;
+                    margin-top: 0;
+                }
+                div.search-bar-package {
+                    form {
+                        display: flex; // tự kéo dãn chiều cao các thành phần con khít với cha, xếp các thành phần con sát nhau
+                        position: relative;
+                        span.search-bar-icon {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            z-index: 5;
+                            top: 8px;
+                            left: 8px;
+                            // màu icon
+                            svg {
+                                path {
+                                    fill: #95979d;
+                                }
+                            }
+                        }
+                        input {
+                            flex-grow: 1;
+                            font-size: 16px;
+                            padding: 7px 7px 7px 28px;
+                            border-radius: 3px;
+                            font-weight: 400;
+                            box-shadow: none;
+                            z-index: 3;
+                            background-color: #fff;
+                            margin: 0;
+                            resize: none;
+                            color: #7a7d85;
+                            border: 1px #ddd solid;
+                            line-height: 100%;
+                            vertical-align: middle;
+                            outline: none;
+                            outline-offset: initial;
+                            @media only screen and (min-width: 900px) {
+                                font-size: 15px;
+                                padding-top: 8px;
+                            }
+                            @media screen and (min-width: 1160px) {
+                                border-right: 0;
+                                border-radius: 3px 0 0 3px;
+                            }
+                            &:focus {
+                                border-color: #999;
+                                outline: none;
+                            }
+                        }
+                        button.submit-button {
+                            display: none;
+                            @media screen and (min-width: 1160px) {
+                                padding: 8px 16px;
+                                display: inline-block;
+                                font-size: 14px;
+                                font-weight: 700;
+                                border-radius: 0 3px 3px 0;
+                                border: 1px solid transparent;
+
+                                line-height: 93%;
+                                text-decoration: none;
+                                text-align: center;
+                                cursor: pointer;
+                                transition: 0.15s ease-in-out;
+                                text-shadow: none;
+                                color: #fff;
+                                background-color: #1dbf73;
+                                width: auto;
+                                margin: 0;
+                                &:hover {
+                                    background: #19a463;
+                                }
+                                &:active {
+                                    background: #168a53;
+                                }
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            nav.fiverr-nav {
+                display: inline-block;
+                display: flex;
+                // dịch sang con bên phải
+                @media only screen and (min-width: 600px) {
+                    flex-grow: 1;
+                    justify-content: flex-end;
+                }
+                ul {
+                    display: inline;
+                    list-style: none;
+                    margin-bottom: 0;
+                    li {
+                        display: inline;
+                        padding: 0 24px 0 0;
+                        @media (max-width: 1240px) and (min-width: 1082px) {
+                            padding-right: 20px;
+                        }
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                    li.display-from-lg1 {
+                        display: none;
+                        @media screen and (min-width: 1160px) {
+                            display: inline;
+                        }
+                        a.link {
+                            color: #1fd0b6;
+                            white-space: nowrap;
+                            font-weight: 600;
+                            font-size: 17px;
+                            &:hover {
+                                color: #6ce9d7;
+                            }
+                        }
+                    }
+                    li.display-from-lg2 {
+                        display: none;
+                        @media screen and (min-width: 1160px) {
+                            display: inline;
+                        }
+
+                        .resources-tab-package {
+                            display: inline;
+                            .fit-popover {
+                                display: inline;
+                                // .fit-popover-content {
+                                //     .tab-title {
+                                //     }
+                                // }
+                            }
+                        }
+                    }
+                    li.display-from-lg3 {
+                        display: none;
+                        @media screen and (min-width: 1160px) {
+                            display: inline;
+                        }
+
+                        section.locale-settings-trigger {
+                            display: inline;
+                            section.globe {
+                                display: inline;
+                                button.selection-trigger {
+                                    background: none;
+                                    border: none;
+                                    &:hover {
+                                        svg {
+                                            path {
+                                                fill: #1dbf73;
+                                            }
+                                        }
+                                    }
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                    span.trigger-icon {
+                                        svg {
+                                            margin: 0 4px 2px 0;
+                                            height: 16px;
+                                            width: 16px;
+                                            // path {
+                                            // }
+                                        }
+                                    }
+                                }
+                            }
+                            section.package {
+                                display: inline;
+                                button.selection-trigger {
+                                    border: none;
+                                    background: none;
+                                    padding-left: 20px;
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    li.display-from-md4 {
+                        display: none;
+                        @media screen and (min-width: 900px) {
+                            display: inline;
+                        }
+                        // a.link {
+                        // }
+                    }
+                    li.display-from-sm5 {
+                        //2
+                        display: none;
+                        @media screen and (min-width: 600px) {
+                            display: inline;
+                        }
+                        // a.js-open-popup-login {
+                        // }
+                    }
+                    li.display-alway {
+                        padding: 0 0 0 0;
+                        a.fiverr-header-join {
+                            font-size: 17px;
+                            color: #62646a;
+                            font-weight: 600;
+                            transition: 0.15s ease-in-out;
+                            cursor: pointer;
+                            margin-top: -2px;
+                            &:hover {
+                                color: #95979d;
+                            }
+                            @media screen and (min-width: 600px) {
+                                margin-top: 0;
+                                background-color: #fff;
+                                border: 1px solid #1dbf73;
+                                border-radius: 3px;
+                                padding: 10px 16px;
+                                color: #1dbf73;
+                                font-size: 14px;
+                                font-weight: 700;
+                                &:hover {
+                                    background-color: #1dbf73;
+                                    border-color: #1dbf73;
+                                    color: #fff;
+                                }
+                                &:active {
+                                    background-color: #168a53;
+                                    border-color: #168a53;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 1: chuyển sang inline
+// 2: ẩn hiện element
+// 3: style element + responsive
+// 4: reposive
+
+// style class styleNav
+.header {
+    .styleNav {
+        font-weight: 600;
+        color: #7a7d85;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 24px;
+        // màu logo globle
+        fill: #7a7d85;
+        &:hover {
+            color: #1dbf73 !important;
+        }
+    }
+}

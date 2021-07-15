@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    @include styleText($color-gray-0, $fs-1 + 1, $fw-bold-0 - 200);
+    ::selection {
+        background: #d5d4d2;
+        color: #fff;
+        text-shadow: none;
+    }
+}

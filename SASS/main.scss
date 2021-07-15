@@ -1,0 +1,29 @@
+//Helper
+@import "./Helper/variables";
+@import "./Helper/mixin";
+//Vendor
+//code của thư viện
+//Base
+@import "./Base/reset";
+@import "./Base/customize";
+//Components
+@import "./Components/button";
+@import "./Components/settingBody";
+
+//Layouts
+@import "./Layouts/sellCarousel";
+@import "./Layouts/sellCommunity";
+@import "./Layouts/sellCommunityPopup";
+@import "./Layouts/sellLearn";
+@import "./Layouts/sellHeader";
+@import "./Layouts/sellQA";
+@import "./Layouts/sellHow";
+@import "./Layouts/sellStarted";
+@import "./Layouts/sellBuyer";
+@import "./Layouts/sellFooter";
+@import "./Layouts/sellPopupLanguage";
+
+// Page
+//code riêng cho 1 trang cụ thể
+//Theme
+//dark

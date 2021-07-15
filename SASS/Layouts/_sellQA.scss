@@ -1,0 +1,105 @@
+section.qa {
+    background: #f7f7f7;
+    margin: 0 auto;
+    position: relative;
+    .qaContent {
+        width: 988px;
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 40px;
+        padding-top: 40px;
+        width: 988px;
+        @media (min-width: 1260px) {
+            width: 1240px;
+        }
+        div.qaHeader {
+            display: block;
+            h2 {
+                text-align: center;
+                text-transform: capitalize;
+                padding-bottom: 30px;
+                color: #222325;
+                font-size: 28px;
+                line-height: 130%;
+                font-weight: 700;
+                @media only screen and (min-width: 600px) {
+                    font-size: 32px;
+                    line-height: 120%;
+                }
+            }
+        }
+        ul.componentLeft {
+            margin-right: 1%;
+            width: 49%;
+            float: left;
+            padding: 0;
+            list-style: none;
+        }
+        ul.componentRight {
+            margin-left: 1%;
+            width: 49%;
+            float: left;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            li.lp {
+                border-left: 5px transparent solid;
+                transition: border-color, 0.3s;
+                background-color: white;
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 15px;
+                overflow: hidden;
+                text-align: left;
+                border-radius: 3px;
+                // xoay mũi tên
+                &.opened {
+                    section:before {
+                        transform: rotateZ(-180deg);
+                    }
+                }
+                // hiện nội dung
+                &.opened {
+                    div.panel {
+                        padding: 20px 15px;
+                        max-height: inherit;
+                        color: #0e0e0f;
+                    }
+                }
+                &:hover {
+                    border-color: #1dbf73;
+                }
+                section {
+                    font-weight: 700;
+                    font-size: 14px;
+                    padding: 20px 15px;
+                    cursor: pointer;
+                    color: #0e0e0f;
+                    line-height: 20px;
+                    // mũi tên
+                    &::before {
+                        content: "\f078";
+                        color: #0e0e0f;
+                        font-size: 11px;
+                        display: block;
+                        float: right;
+                        transition: transform 0.3s;
+                        font-weight: 900;
+                        font-family: "Font Awesome 5 Free";
+                    }
+
+                }
+                div.panel {
+                    font-size: 14px;
+                    font-weight: 500;
+                    margin: 0;
+                    max-height: 0;
+                    padding: 0 20px 0 0;
+                    transition: max-height 0.3s, padding-top 0.3s;
+                }
+            }
+        }
+    }
+}

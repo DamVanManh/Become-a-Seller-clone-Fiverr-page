@@ -1,0 +1,102 @@
+.sellCarousel_content {
+    position: relative;
+    height: 580px;
+    z-index: 0;
+    overflow: hidden;
+    background-color: #1f1f1f;
+    video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        // từ dưới 1490 scroll dọc video không dịch chuyển
+        @media screen and (max-width: 1490px) {
+            position: fixed;
+            z-index: 1;
+            height: 580px;
+        }
+    }
+    .text {
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.3);
+        h1 {
+            color: #fff;
+            font-size: 50px;
+            line-height: 110%;
+            max-width: 750px;
+            margin: 0 auto;
+            font-weight: 700;
+        }
+        p {
+            color: #fff;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;
+            max-width: 750px;
+            margin: 5px auto 15px;
+        }
+        a {
+            background-color: #1dbf73;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 700;
+            color: #fff;
+            border: 1px solid transparent;
+            padding: 15px 35px;
+            margin: 0;
+            display: inline-block;
+            border-radius: 3px;
+            margin: 15px 8px 0;
+            cursor: pointer;
+            &:hover {
+                background-color: #3fca89;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .stats {
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100%;
+        padding: 25px 0;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        .box-row {
+            width: 988px;
+            margin: 0 auto;
+            @media screen and (min-width: 1260px){
+                width: 1240px;
+            }
+            ul {
+                list-style: none;
+                margin-bottom: 0;
+                li {
+                    // display: inline;
+                    color: #fff;
+                    font-size: 22px;
+                    line-height: 30px;
+                    width: 33.33%;
+                    float: left;
+                    text-align: center;
+                    p {
+                        margin-bottom: 5px;
+                    }
+                    strong {
+                        font-size: 45px;
+                        font-weight: 400;
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+}
+.clear {
+    clear: both;
+}
